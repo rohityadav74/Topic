@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher's Log & Review</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Update Today's Topic</h1>
+        <form id="logForm">
+            <label for="teacherName">Teacher Name:</label>
+            <input type="text" id="teacherName" placeholder="Enter your name" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" placeholder="Enter subject" required>
+
+            <label for="topic">What was taught:</label>
+            <textarea id="topic" placeholder="Describe the topic taught" required></textarea>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" required readonly>
+
+            <!-- Review Section -->
+            <h2>Class Review</h2>
+            <label for="rating">Rating:</label>
+            <select id="rating" required>
+                <option value="">Select Rating</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+
+            <label for="review">Your Comments:</label>
+            <textarea id="review" placeholder="Write your review here..." required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="logContainer">
+            <h2>Today's Logs & Reviews</h2>
+            <ul id="logList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
